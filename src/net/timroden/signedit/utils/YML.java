@@ -1,9 +1,10 @@
-package com.cyprias;
+package net.timroden.signedit.utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -99,7 +100,7 @@ public class YML {
 		YamlConfiguration locales = new YamlConfiguration();
 		
 		try {
-			locales.load(in);
+			locales.load(new InputStreamReader(in));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InvalidConfigurationException e) {

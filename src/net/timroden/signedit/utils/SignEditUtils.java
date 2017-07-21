@@ -7,11 +7,11 @@ import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
-import org.bukkit.block.BlockState;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.block.SignChangeEvent;
+import org.bukkit.inventory.EquipmentSlot;
 
 public class SignEditUtils {
 	private SignEdit plugin;
@@ -64,7 +64,7 @@ public class SignEditUtils {
 				return true;
 			}
 
-			BlockPlaceEvent p = new BlockPlaceEvent(theBlock, theBlock.getState(), theBlock, null, thePlayer, true);
+			BlockPlaceEvent p = new BlockPlaceEvent(theBlock, theBlock.getState(), theBlock, null, thePlayer, true, EquipmentSlot.HAND);
 			
 			this.plugin.pluginMan.callEvent(p);
 			

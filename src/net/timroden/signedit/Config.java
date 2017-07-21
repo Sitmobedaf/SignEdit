@@ -13,7 +13,6 @@ public class Config {
 	private static boolean commandsLogFile;
 	private static boolean colorsOnPlace;
 	private static boolean useCOPPerm;
-	private static boolean metrics;
 	private static Action clickAction;
 	private static String logName;
 	private static String locale;
@@ -48,7 +47,6 @@ public class Config {
 		useCOPPerm = config.getBoolean("signedit.colorsonplace.usepermission");
 		locale = config.getString("signedit.locale");
 
-		metrics = config.getBoolean("signedit.metrics");
 		fireBlockBreakPlace = config.getBoolean("signedit.fireBlockBreakPlace");
 
 		if (invertMouse)
@@ -99,10 +97,6 @@ public class Config {
 
 	public static String getLocale() {
 		return locale;
-	}
-
-	public boolean useMetrics() {
-		return metrics;
 	}
 
 	public String clickActionStr() {
