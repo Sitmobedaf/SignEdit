@@ -149,9 +149,9 @@ public class CommandSignEdit implements CommandExecutor {
 				return true;
 			}
 
-			if (line.length() > 15) {
+			if (line.length() > 23) {
 				player.sendMessage(this.plugin.chatPrefix + this.plugin.localization.get("truncating"));
-				line = line.substring(0, 15);
+				line = line.substring(0, 23);
 			}
 			this.plugin.log.logAll(player.getName(), this.utils.implode(args, " ", 0, args.length), LogType.PLAYERCOMMAND, Level.INFO);
 			SignEditDataPackage tmp = new SignEditDataPackage(player.getName(), SignFunction.EDIT, line, Integer.parseInt(args[0]) - 1);
